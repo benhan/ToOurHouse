@@ -8,6 +8,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :state
       t.string :zipcode
       t.string :country
+      t.string :website
 
       t.timestamps
     end
