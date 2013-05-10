@@ -1,0 +1,14 @@
+<%= simple_form_for(@responsibility, html: {class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :organization_type, collection: ["Host Organization", "Support Organization", "TOH Staff", "Transportation"] %>
+    <%= f.input :positions, hint: "Enter the number of volunteers needed per night for this role", input_html: { value: '1'} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>

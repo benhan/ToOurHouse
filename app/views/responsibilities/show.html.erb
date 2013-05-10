@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="span6 offset3">
+    <div class="well">
+      <h3><%= @responsibility.name %></h3>
+      <h6><%= @responsibility.organization_type %></h6>
+      <p class="description">
+        <blockquote><%= @responsibility.description %></blockquote>
+      </p>
+      <p>
+        For each night, there
+        <% if(@responsibility.positions > 1) %>
+        	are
+      	<% else %>
+      		is
+    		<% end %>
+				<%= @responsibility.positions %>
+				<%= @responsibility.name %>
+				needed.
+      </p>
+      <%= link_to 'Edit', edit_responsibility_path(@responsibility) %> |
+			<%= link_to 'Back', responsibilities_path %>
+    </div>
+  </div>
+</div>

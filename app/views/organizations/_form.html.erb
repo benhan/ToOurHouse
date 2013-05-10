@@ -7,13 +7,13 @@
     <%= f.input :image %>
     <%= f.input :street %>
     <%= f.input :city %>
-    <%= f.input :state, input_html: { maxlength: 2 } %>
+    <%= f.input :state, input_html: { maxlength: 2, value: 'VA'}  %>
     <%= f.input :zipcode, input_html: { maxlength: 5 } %>
     <%= f.input :country, priority: ["United States"] %>
     <%= f.input :website %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>

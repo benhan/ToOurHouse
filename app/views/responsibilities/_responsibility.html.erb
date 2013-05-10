@@ -1,0 +1,13 @@
+<div class="box">
+  <h6><%= responsibility.organization_type %>:</h6>
+  <h3><%= responsibility.name %></h3>
+  <p class="description">
+			<%= responsibility.description %>
+  </p>
+
+  <p>
+	  <%= link_to 'Show', responsibility %>
+	  <%= link_to 'Edit', edit_responsibility_path(responsibility) %>
+	  <%= link_to 'Destroy', responsibility, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>
