@@ -1,9 +1,13 @@
 Toourhouse::Application.routes.draw do
   
+  # Page navigation paths
   root :to => 'pages#home'
   get 'about' => 'pages#about'
 
+  # User paths
+  get "users/show"
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
