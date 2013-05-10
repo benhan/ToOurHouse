@@ -33,6 +33,5 @@ class Ability
 
     def banned
       cannot :read, :all
-    end  
-  end
+    end
 end
