@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'country_select'
 gem 'paperclip', '~> 3.0'
+gem 'aws-sdk'
 gem 'cancan'
 
 group :production do
