@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510014448) do
+ActiveRecord::Schema.define(:version => 20130510022449) do
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "country"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "website"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

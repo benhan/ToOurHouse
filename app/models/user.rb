@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
 
   # Relationships
   has_attached_file :image, styles: {tiny: "25x25>", small: "50x50>", profile: "180x180>"}, :dependent => :destroy
+  belongs_to :organization
 end

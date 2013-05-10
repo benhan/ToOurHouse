@@ -1,8 +1,11 @@
 Toourhouse::Application.routes.draw do
   
+  resources :organizations
+
   # Page navigation paths
   root :to => 'pages#home'
   get 'about' => 'pages#about'
+  get 'organizations' => 'organizations#index'
 
   # User paths
   get "users/show"

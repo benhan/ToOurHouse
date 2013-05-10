@@ -1,0 +1,13 @@
+<tr>
+    <td><%= image_tag organization.image(:small) %></td>
+    <td><%= organization.name %></td>
+    <td><%= organization.street %></td>
+    <td><%= organization.city %></td>
+    <td><%= organization.zipcode %></td>
+    <td><%= organization.state %></td>
+    <td><%= organization.country %></td>
+    <td><%= link_to organization.website %></td>
+    <td><%= link_to 'Show', organization %></td>
+    <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+    <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
