@@ -10,4 +10,5 @@ class Osignup < ActiveRecord::Base
 
   # Relationships
   belongs_to :organization
+  has_many :vsignups, :dependent => :destroy
 end
