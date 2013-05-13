@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510144657) do
+ActiveRecord::Schema.define(:version => 20130513032746) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(:version => 20130510144657) do
     t.datetime "image_updated_at"
     t.string   "website"
   end
+
+  create_table "osignups", :force => true do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "organization_id"
+    t.string   "organization_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "osignups", ["organization_id"], :name => "index_osignups_on_organization_id"
 
   create_table "responsibilities", :force => true do |t|
     t.string   "name"

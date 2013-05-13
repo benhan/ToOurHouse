@@ -1,0 +1,29 @@
+<h1>Listing osignups</h1>
+
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Organization</th>
+    <th>Organization type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @osignups.each do |osignup| %>
+  <tr>
+    <td><%= osignup.start_date %></td>
+    <td><%= osignup.end_date %></td>
+    <td><%= osignup.organization %></td>
+    <td><%= osignup.organization_type %></td>
+    <td><%= link_to 'Show', osignup %></td>
+    <td><%= link_to 'Edit', edit_osignup_path(osignup) %></td>
+    <td><%= link_to 'Destroy', osignup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Osignup', new_osignup_path %>

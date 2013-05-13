@@ -1,0 +1,14 @@
+<%= simple_form_for(@osignup) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.association :organization %>
+    <%= f.input :organization_type, collection: ["Host Organization", "Support Organization", "TOH Staff", "Transportation"] %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start date:</b>
+  <%= @osignup.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @osignup.end_date %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= image_tag @osignup.organization.image(:tiny) %>
+  <%= @osignup.organization.name %>
+</p>
+
+<p>
+  <b>Organization type:</b>
+  <%= @osignup.organization_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_osignup_path(@osignup) %> |
+<%= link_to 'Back', osignups_path %>
