@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b> <br />
+  <%= @vsignup.date %>
+</p>
+
+<p>
+  <b>User:</b> <br />
+  <%= image_tag @vsignup.User.image(:small) %> <br />
+  <%= @vsignup.User.name %>
+</p>
+
+<p>
+  <b>Responsibility:</b> <br />
+  <%= @vsignup.Responsibility.name %> <br />
+  <i><%= @vsignup.Responsibility.description %></i>
+</p>
+
+<p>
+  <b>Organization signup:</b> <br />
+  <%= @vsignup.Osignup.organization.name %> (<%= @vsignup.Osignup.organization_type %>) <br />
+  <%= @vsignup.Osignup.start_date %> - <%= @vsignup.Osignup.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_vsignup_path(@vsignup) %> |
+<%= link_to 'Back', vsignups_path %>

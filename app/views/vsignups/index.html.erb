@@ -1,0 +1,29 @@
+<h1>Listing vsignups</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Responsibility</th>
+    <th>Osignup</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vsignups.each do |vsignup| %>
+  <tr>
+    <td><%= vsignup.date %></td>
+    <td><%= vsignup.User %></td>
+    <td><%= vsignup.Responsibility %></td>
+    <td><%= vsignup.Osignup %></td>
+    <td><%= link_to 'Show', vsignup %></td>
+    <td><%= link_to 'Edit', edit_vsignup_path(vsignup) %></td>
+    <td><%= link_to 'Destroy', vsignup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Volunteer Sign-up', new_vsignup_path %>

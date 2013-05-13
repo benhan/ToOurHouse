@@ -10,5 +10,4 @@ class Osignup < ActiveRecord::Base
 
   # Relationships
   belongs_to :organization
-  attr_accessible :end_date, :start_date
 end

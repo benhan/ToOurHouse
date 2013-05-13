@@ -1,5 +1,8 @@
 Toourhouse::Application.routes.draw do
   
+  resources :vsignups
+
+
   resources :osignups
 
 
