@@ -1,5 +1,8 @@
 Toourhouse::Application.routes.draw do
   
+  resources :osignups
+
+
   resources :events
 
 

@@ -1,0 +1,22 @@
+<h1>Listing Organizational Signups</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Event</th>
+    <th>Organization</th>
+    <th>Organization type</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <%= render @osignups %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Osignup', new_osignup_path %>

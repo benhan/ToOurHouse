@@ -14,5 +14,6 @@ class Organization < ActiveRecord::Base
 
   # Relationships
   has_attached_file :image, styles: {tiny: "25x25>", small: "50x50>", profile: "180x180>"}, :dependent => :destroy
-  has_many :users
+  has_many :Users
+  has_many :Osignups, :dependent => :destroy
 end

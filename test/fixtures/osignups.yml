@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Event: 
+  Organization: 
+  organization_type: MyString
+  start_date: 2013-05-14
+  end_date: 2013-05-14
+
+two:
+  Event: 
+  Organization: 
+  organization_type: MyString
+  start_date: 2013-05-14
+  end_date: 2013-05-14

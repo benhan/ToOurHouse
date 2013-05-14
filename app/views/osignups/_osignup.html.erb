@@ -1,0 +1,10 @@
+  <tr>
+    <td><%= osignup.Event.name %></td>
+    <td><%= osignup.Organization.name %></td>
+    <td><%= osignup.organization_type %></td>
+    <td><%= osignup.start_date %></td>
+    <td><%= osignup.end_date %></td>
+    <td><%= link_to 'Show', osignup %></td>
+    <td><%= link_to 'Edit', edit_osignup_path(osignup) %></td>
+    <td><%= link_to 'Destroy', osignup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>

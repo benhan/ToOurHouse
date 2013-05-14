@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @osignup.Event %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @osignup.Organization %>
+</p>
+
+<p>
+  <b>Organization type:</b>
+  <%= @osignup.organization_type %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @osignup.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @osignup.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_osignup_path(@osignup) %> |
+<%= link_to 'Back', osignups_path %>

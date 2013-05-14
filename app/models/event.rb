@@ -8,5 +8,5 @@ class Event < ActiveRecord::Base
   validates :end_date, presence: true
 
   # Relationships
-
+  has_many :Osignups, :dependent => :destroy
 end
