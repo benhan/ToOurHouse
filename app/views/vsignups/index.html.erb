@@ -1,0 +1,22 @@
+<h1>Listing vsignups</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>User</th>
+    <th>Responsibility</th>
+    <th>Osignup</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <%= render @vsignups %>
+  </tbody>
+
+</table>
+
+<br />
+
+<%= link_to 'New Vsignup', new_vsignup_path %>

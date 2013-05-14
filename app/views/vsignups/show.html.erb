@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @vsignup.User %>
+</p>
+
+<p>
+  <b>Responsibility:</b>
+  <%= @vsignup.Responsibility %>
+</p>
+
+<p>
+  <b>Osignup:</b>
+  <%= @vsignup.Osignup %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @vsignup.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_vsignup_path(@vsignup) %> |
+<%= link_to 'Back', vsignups_path %>
