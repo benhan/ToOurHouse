@@ -1,25 +1,18 @@
 <h1>Listing events</h1>
 
-<table>
-  <tr>
+<table class="table table-striped">
+  <thead>
     <th>Name</th>
     <th>Start date</th>
     <th>End date</th>
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+  </thead>
 
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.start_date %></td>
-    <td><%= event.end_date %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <tbody>
+    <%= render @events %>
+  </tbody>
 </table>
 
 <br />
