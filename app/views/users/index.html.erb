@@ -1,0 +1,24 @@
+<h1>Listing Users</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Picture</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Date Created</th>
+    <th>Sign In Count</th>
+    <th>Last Sign In</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'Create New User account', new_user_registration_path %>
