@@ -1,8 +1,20 @@
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.start_date %></td>
-    <td><%= event.end_date %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="row-fluid">
+  <div class="span12">
+    <h2><%= event.name %></h2>
+    <h4>From <%= event.start_date.strftime("%a, %b %d") %> to <%= event.end_date.strftime("%a, %b %d") %></h4>
+  	<% if can? :create, @osignups %>
+			<p>
+				<%= link_to 'Sign my organization up for this event!', new_osignup_path %>
+			</p>
+		<% end %>
+  	<p>
+  		<%= link_to 'Show', event_path(event) %>
+  		<% if can? :update, event %>
+  			<%= link_to 'Edit', edit_event_path(event) %>
+  		<% end %>
+  		<% if can? :destroy, event %>
+  			<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  		<% end %>
+  	</p>
+  </div>
+</div>
