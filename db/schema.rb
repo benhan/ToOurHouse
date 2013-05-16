@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130514220505) do
 
   create_table "events", :force => true do |t|
@@ -20,6 +21,9 @@ ActiveRecord::Schema.define(:version => 20130514220505) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+=======
+ActiveRecord::Schema.define(:version => 20130513041926) do
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
@@ -39,17 +43,28 @@ ActiveRecord::Schema.define(:version => 20130514220505) do
   end
 
   create_table "osignups", :force => true do |t|
+<<<<<<< HEAD
     t.integer  "Event_id"
     t.integer  "Organization_id"
     t.string   "organization_type"
     t.date     "start_date"
     t.date     "end_date"
+=======
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "organization_id"
+    t.string   "organization_type"
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
 
+<<<<<<< HEAD
   add_index "osignups", ["Event_id"], :name => "index_osignups_on_Event_id"
   add_index "osignups", ["Organization_id"], :name => "index_osignups_on_Organization_id"
+=======
+  add_index "osignups", ["organization_id"], :name => "index_osignups_on_organization_id"
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 
   create_table "responsibilities", :force => true do |t|
     t.string   "name"
@@ -85,10 +100,17 @@ ActiveRecord::Schema.define(:version => 20130514220505) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "vsignups", :force => true do |t|
+<<<<<<< HEAD
     t.integer  "User_id"
     t.integer  "Responsibility_id"
     t.integer  "Osignup_id"
     t.date     "date"
+=======
+    t.date     "date"
+    t.integer  "User_id"
+    t.integer  "Responsibility_id"
+    t.integer  "Osignup_id"
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end

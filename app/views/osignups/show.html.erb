@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<<<<<<< HEAD
   <b>Event:</b>
   <%= @osignup.Event %>
 </p>
@@ -23,6 +24,26 @@
 <p>
   <b>End date:</b>
   <%= @osignup.end_date %>
+=======
+  <b>Start date:</b>
+  <%= @osignup.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @osignup.end_date %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= image_tag @osignup.organization.image(:tiny) %>
+  <%= @osignup.organization.name %>
+</p>
+
+<p>
+  <b>Organization type:</b>
+  <%= @osignup.organization_type %>
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 </p>
 
 

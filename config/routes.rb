@@ -6,9 +6,12 @@ Toourhouse::Application.routes.draw do
   resources :osignups
 
 
+<<<<<<< HEAD
   resources :events
 
 
+=======
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
   resources :responsibilities
   resources :organizations
 

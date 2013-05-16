@@ -1,5 +1,6 @@
 <h1>Listing vsignups</h1>
 
+<<<<<<< HEAD
 <table class="table table-striped">
   <thead>
     <th>User</th>
@@ -15,8 +16,36 @@
     <%= render @vsignups %>
   </tbody>
 
+=======
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Responsibility</th>
+    <th>Osignup</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vsignups.each do |vsignup| %>
+  <tr>
+    <td><%= vsignup.date %></td>
+    <td><%= vsignup.User %></td>
+    <td><%= vsignup.Responsibility %></td>
+    <td><%= vsignup.Osignup %></td>
+    <td><%= link_to 'Show', vsignup %></td>
+    <td><%= link_to 'Edit', edit_vsignup_path(vsignup) %></td>
+    <td><%= link_to 'Destroy', vsignup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 </table>
 
 <br />
 
+<<<<<<< HEAD
 <%= link_to 'New Vsignup', new_vsignup_path %>
+=======
+<%= link_to 'New Volunteer Sign-up', new_vsignup_path %>
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8

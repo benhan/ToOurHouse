@@ -2,11 +2,18 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+<<<<<<< HEAD
     <%= f.association :Event %>
     <%= f.association :Organization %>
     <%= f.input :organization_type, collection: ["Host Organization", "Support Organization", "TOH Staff", "Transportation"] %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
+=======
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.association :organization %>
+    <%= f.input :organization_type, collection: ["Host Organization", "Support Organization", "TOH Staff", "Transportation"] %>
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
   </div>
 
   <div class="form-actions">

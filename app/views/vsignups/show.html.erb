@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<<<<<<< HEAD
   <b>User:</b>
   <%= @vsignup.User %>
 </p>
@@ -18,6 +19,28 @@
 <p>
   <b>Date:</b>
   <%= @vsignup.date %>
+=======
+  <b>Date:</b> <br />
+  <%= @vsignup.date %>
+</p>
+
+<p>
+  <b>User:</b> <br />
+  <%= image_tag @vsignup.User.image(:small) %> <br />
+  <%= @vsignup.User.name %>
+</p>
+
+<p>
+  <b>Responsibility:</b> <br />
+  <%= @vsignup.Responsibility.name %> <br />
+  <i><%= @vsignup.Responsibility.description %></i>
+</p>
+
+<p>
+  <b>Organization signup:</b> <br />
+  <%= @vsignup.Osignup.organization.name %> (<%= @vsignup.Osignup.organization_type %>) <br />
+  <%= @vsignup.Osignup.start_date %> - <%= @vsignup.Osignup.end_date %>
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 </p>
 
 

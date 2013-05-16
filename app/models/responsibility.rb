@@ -9,5 +9,9 @@ class Responsibility < ActiveRecord::Base
   validates :positions, numericality: true
 
   # Relationships
+<<<<<<< HEAD
   has_many :Vsignups, :dependent => :destroy
+=======
+  has_many :vsignups, :dependent => :destroy
+>>>>>>> 19f3ae6cc4629fcb48706e99ff19aeadf87f57b8
 end
