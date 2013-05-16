@@ -1,5 +1,7 @@
 class ResponsibilitiesController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
+  # Load cancan authorization resources
+  load_and_authorize_resource
   # GET /responsibilities
   # GET /responsibilities.json
   def index

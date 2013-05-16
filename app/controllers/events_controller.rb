@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   # GET /events
   # GET /events.json
+  # Load cancan authorization resources
+  load_and_authorize_resource
   def index
     @events = Event.all
 

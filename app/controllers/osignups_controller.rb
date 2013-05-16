@@ -1,4 +1,6 @@
 class OsignupsController < ApplicationController
+  # Load cancan authorization resources
+  load_and_authorize_resource
   # GET /osignups
   # GET /osignups.json
   def index

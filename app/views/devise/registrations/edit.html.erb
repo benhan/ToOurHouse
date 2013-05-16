@@ -26,10 +26,12 @@
 
     <div class="row-fluid">
       <div class="span8">
+        <% if can? :update, @user %>
         <h3>Role settings</h3>
         <p>
           <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
         </p>
+        <% end %>
         <h3>Password settings</h3>
         <p>
           <%= f.input :password, label: "New Password", autocomplete: "off" %>

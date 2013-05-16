@@ -1,4 +1,6 @@
 class VsignupsController < ApplicationController
+  # Load cancan authorization resources
+  load_and_authorize_resource
   # GET /vsignups
   # GET /vsignups.json
   def index

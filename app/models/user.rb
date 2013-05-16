@@ -5,9 +5,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, # :recoverable,
   	:rememberable, :trackable, :validatable
 
-  # Set roles for use with cancan module
-  ROLES = %w[admin toh_staff coordinator volunteer guest banned]
-
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :image, :role
   # attr_accessible :title, :body
@@ -22,4 +19,16 @@ class User < ActiveRecord::Base
   # Relationships
   has_attached_file :image, styles: {tiny: "25x25>", small: "50x50>", profile: "180x180>"}, :dependent => :destroy
   belongs_to :organization
+
+  # Set roles for use with cancan module
+  ROLES = %w[admin toh_staff coordinator volunteer guest banned]
+
+  #Setup default role
+  before_create :setup_default_role_for_new_users
+  private
+  def setup_default_role_for_new_users
+    if self.role.blank?
+      self.role = "volunteer"
+    end
+  end
 end

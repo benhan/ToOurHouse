@@ -2,36 +2,33 @@ class Ability
 	include CanCan::Ability
 
   def initialize(user)
-    @user = user || User.new # for guest
-    @user.roles.each { |role| send(role) }
+    user || User.new # Guest user
 
-    if @user.roles.size == 0
-      can :read, :all #for guest without roles
+    if user.role == "admin"
+      can :manage, :all
+    elsif user.role == "toh_staff"
+      can :create, Event
+      can :update, Event
+      can :manange, Osignup
+      can :manage, Vsignup
+      can :manage, Responsibility
+      can :create, User
+      can :update, User
+      can :read, :all
+    elsif user.role == "coordinator"
+      can :manage, Vsignup
+      can :create, Osignup
+      can :update, Osignup
+      can :update, Responsibility
+      can :create, Responsibility
+      can :read, :all
+    elsif user.role == "volunteer"
+      can :manage, Vsignup
+      can :read, :all
+    elsif user.role == "guest"
+      can :read, :all
+    else
+      cannot :read, :all
     end
-  end
-
-  def admin
-    toh_staff
-  end
-
-  def toh_staff
-    coordinator
-  end
-
-  def coordinator
-    volunteer
-    can :manage, :all
-  end
-
-  def volunteer
-    can :read, :all
-  end
-
-  def guest
-    can :read, :all
-  end
-
-  def banned
-    cannot :read, :all
   end
 end

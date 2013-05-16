@@ -1,14 +1,8 @@
 Toourhouse::Application.routes.draw do
   
   resources :vsignups
-
-
   resources :osignups
-
-
   resources :events
-
-
   resources :responsibilities
   resources :organizations
 
@@ -16,12 +10,14 @@ Toourhouse::Application.routes.draw do
   root :to => 'pages#home'
   get 'about' => 'pages#about'
   get 'organizations' => 'organizations#index'
-  get 'responsibilities' => 'responsibilities#index'
+  get 'responsibilities' => 'events#index'
+
 
   # User paths
   get "users/show"
   devise_for :users
   match 'users/:id' => 'users#show', as: :user
+  get 'users' => 'users#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
